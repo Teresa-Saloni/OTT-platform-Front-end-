@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="down.css">
+  <style>
+    .style1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      align-items: center;
+    }
+    .style{
+      display: block;
+        height: 75px;
+        width:298px;
+        margin-left: 0px;
+        padding-left: 0px;
+      justify-content: space-between;
+      align-items: center;
+ 
+
+    }
+    .style:hover{
+      background-color: rgba(0,0,0,0.25);
+      transition: 0.5s;
+      border-radius: 5px;
+
+    }
+    .social-media {
+            align-items: center;
+        }
+
+        .links a,
+        .social-media a {
+            text-decoration: none;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .social-media a {
+            font-size: 20px;
+            margin: 5px 0;
+        }
+        .cdetails {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            background-color: #e0e0e0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Film Flow</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="main-pg.css">
+</head>
+<body style = "background-color: black;">
+  <div class="container">
+    <header>
+      <button id="openPanel"><i class="fas fa-bars"></i></button>
+      <h1 style = "margin-right: 0;padding-right: 0;">Film Flow</h1>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search Movie...">
+        <button id="searchBtn"><i class="fas fa-search"></i></button>
+      </div>
+    </header>
+
+    <div id="panel" class="side-panel">
+      <div class="panel-header">
+        <div class="profile">
+          <div class="profile-img">
+            <img src="r5.jpg" alt="Profile Image">
+          </div>
+          <div class="name-user">
+            <strong>Rafia</strong>
+            <span>@rafia_taseen</span>
+          </div>
+        </div>
+        <button id="closePanel"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="panel-content">
+        <!-- Add your panel content here -->
+        <div class="style1">
+          <div class="style"><p style="padding-left:100px; padding-top: 30px;padding-top: 25px;padding-bottom: 20;"><a style = "text-decoration: none;color:rgb(97, 95, 95)"href = "account.html">Account Info</a></p></div>
+          <div class="style"><p style="padding-left:90px; padding-top: 10px;padding-top: 25px;padding-bottom: 20;"><a style = "text-decoration: none;;color:rgb(97, 95, 95)"href = "support.html">Help and support</a></p></div>
+          <div class="style"><p style="padding-left:110px; padding-top: 10px;padding-top: 25px;padding-bottom: 20;"><a style = "text-decoration: none;;color:rgb(97, 95, 95)"href = "contact-us.html">Contact Us </a></p></div>
+
+          <div class="style"><p style="padding-left:120px; padding-top: 10px;padding-top: 25px;"><a style = "text-decoration: none;;color:rgb(97, 95, 95)"href = "reviews.html">Rate Us</a></p></div>
+          <div class="style"><p style="padding-left:120px; padding-top: 10px;padding-top: 25px;padding-bottom: 20;"><a style = "text-decoration: none;;color:rgb(97, 95, 95)"href = "sign-in.html">Log out</a></p></div>
+      </div>
+      <div style = "margin-top: 160px;height: 180px;" class = "cdetails">
+
+    <center><p>© 2024 FilmFlow.io. All Rights Reserved. Dive into the World of Cinema.</p></center>
+      </div>
+      </div>
+      </div>
+    </div>
+    <div id="overlay"></div>
+
+    <div id="movieDetails"></div>
+    <div id="searchResults"></div>
+  </div>
+  <div class="main-content">
+   <iframe  width = "1550px" height="900px" name = "tar" src="ott.html"></iframe>
+  </div>
+  <footer>
+    <div class="navigation">
+      <ul>
+          <li class="list active">
+              <a target = "tar"href="ott.html">
+                  <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                  <span class="text">Home</span>
+              </a>
+          </li>
+          <li class="list">
+              <a target = "tar"href="explore.html">
+                  <span class="icon"><ion-icon name="compass-outline"></ion-icon>
+                  </span>
+                  <span class="text">Explore</span>
+              </a>
+          </li>
+          
+          <li class="list">
+              <a target = "tar"href="buy-sub.html">
+                  <span class="icon"><ion-icon name="ribbon-outline"></ion-icon></span>
+                  <span class="text">Subscription</span>
+              </a>
+          </li>
+          <div class="indicator"></div>
+      </ul>
+  </div>
+  </footer>
+
+  <script src="search.js"></script>
+  <script src="side-bar.js"></script>
+  <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) =>
+        item.addEventListener('click',activeLink))
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

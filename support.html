@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help</title>
+  <style>
+    body {
+      padding: 0;
+      background-color: #6b6767;
+      font-size: 14px;
+      font-family: 'Montserrat', sans-serif;
+      background: url("(link unavailable)") no-repeat center;
+      background-size: cover;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .wrapper {
+      display: flex;
+      flex-direction: column; /* Change the direction to column */
+      padding-top: 50px;
+      align-items: center; /* Center items horizontally */
+    }
+    .collapsible {
+      max-width: 450px;
+      overflow: hidden;
+      font-weight: 500;
+      display: block;
+      margin-bottom: 20px;
+    }
+    .collapsible input {
+      display: none;
+    }
+    .collapsible label {
+      position: relative;
+      font-weight: 600;
+      background: #fff;
+      box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+      color: #1c1c6b;
+      display: block;
+      margin-bottom: 10px;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+      z-index: 1;
+    }
+    .collapsible label:after {
+      content: "";
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      width: 18px;
+      height: 18px;
+      background: url() no-repeat 0 0;
+      transition: all 0.3s ease;
+    }
+    .collapsible input:checked + label:after {
+      transform: rotate(90deg);
+    }
+    .collapsible-text {
+      max-height: 1px;
+      overflow: hidden;
+      border-radius: 4px;
+      line-height: 1.4;
+      position: relative;
+      top: -100%;
+      opacity: 0.5;
+      transition: all 0.3s ease;
+    }
+    .collapsible input:checked + label + .collapsible-text {
+      max-height: 300px;
+      padding-bottom: 25px;
+      background: #fff;
+      box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+      opacity: 1;
+      top: 0;
+    }
+    .collapsible-text h2 {
+      margin-bottom: 10px;
+      padding: 15px 15px 0;
+      color: #1c1c6b;
+    }
+    .collapsible-text p {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="collapsible">
+      <input type="checkbox" id="collapsible-head1">
+      <label for="collapsible-head1">Streaming Issues</label>
+      <div class="collapsible-text">
+        <h2>STREAMING ISSUES</h2>
+        <p>Check your internet connection, restart the app or browser, and contact our support team if the issue persists.</p>
+      </div>
+    </div>
+    <div class="collapsible">
+      <input type="checkbox" id="collapsible-head2">
+      <label for="collapsible-head2">Login Issues</label>
+      <div class="collapsible-text">
+        <h2>LOGIN ISSUES</h2>
+        <p>Check your login credentials, reset your password, and contact our support team if the issue persists.</p>
+      </div>
+    </div>
+    <div class="collapsible">
+      <input type="checkbox" id="collapsible-head3">
+      <label for="collapsible-head3">Payment Issues</label>
+      <div class="collapsible-text">
+        <h2>PAYMENT ISSUES</h2>
+        <p>Check your payment method, update your payment information, and contact our support team if the issue persists.</p>
+      </div>
+    </div>
+    <div class="collapsible">
+      <input type="checkbox" id="collapsible-head4">
+      <label for="collapsible-head4">Content Issues</label>
+      <div class="collapsible-text">
+        <h2>CONTENT ISSUES</h2>
+        <p>Check our content availability, report any inappropriate content, and contact our support team if the issue persists.</p>
+      </div>
+    </div>
+    <div class="collapsible">
+      <input type="checkbox" id="collapsible-head5">
+      <label for="collapsible-head5">App Issues</label>
+      <div class="collapsible-text">
+        <h2>APP ISSUES</h2>
+        <p>Check our app updates, uninstall and reinstall the app, and contact our support team if the issue persists.</p>
+      </div>
+    </div>
+    <div class="collapsible">
+      <input type="checkbox" id="collapsible-head6">
+      <label for="collapsible-head6">Membership Upgrade Issues</label>
+      <div class="collapsible-text">
+        <h2>MEMBERSHIP UPGRADE ISSUES</h2>
+        <p>If you're facing issues upgrading your membership, ensure your payment method is valid, check for any restrictions on your account, and contact our support team for assistance.</p>
+      </div>
+    </div>
+    <div class="collapsible">
+      <input type="checkbox" id="collapsible-head7">
+      <label for="collapsible-head7">Membership Cancellation Issues</label>
+      <div class="collapsible-text">
+        <h2>MEMBERSHIP CANCELLATION ISSUES</h2>
+        <p>If you're having trouble canceling your membership, make sure you're following the correct cancellation procedure, verify your account details, and contact our support team if the issue persists.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- custom css file link -->
+         <link rel="stylesheet" href="style11.css">
+    </head>
+    <body>
+        <div style = "margin-top: 60px;"class="container">
+            <h1>Trendings</h1>
+
+            <div class="video-container">
+                <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v1.mp4"></video></div>
+                <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v2.mp4"></video></div>
+                <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v3.mp4"></video></div>
+                <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v4.mp4"></video></div>
+                <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v5.mp4"></video></div>
+                <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v6.mp4"></video></div>
+                <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v7.mp4"></video></div>
+                <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v8.mp4"></video></div>
+                <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v9.mp4"></video></div>
+                <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v10.mp4"></video></div>
+                <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v11.mp4"></video></div>
+                <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v12.mp4"></video></div>
+                <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v13.mp4"></video></div>
+                <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v14.mp4"></video></div>
+                <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v15.mp4"></video></div>
+                <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v16.mp4"></video></div>
+
+            </div>
+
+            <div class="popup-video">
+               <span><p style ="margin-top:50px;">&times;</p></span>
+               <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v1.mp4"></video></div>
+               <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v2.mp4"></video></div>
+               <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v3.mp4"></video></div>
+               <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v4.mp4"></video></div>
+               <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v5.mp4"></video></div>
+               <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v6.mp4"></video></div>
+               <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v7.mp4"></video></div>
+               <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v8.mp4"></video></div>
+               <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v9.mp4"></video></div>
+               <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v10.mp4"></video></div>
+               <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v11.mp4"></video></div>
+               <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v12.mp4"></video></div>
+               <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v13.mp4"></video></div>
+               <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v14.mp4"></video></div>
+               <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v15.mp4"></video></div>
+               <div class="video"><video controls><source src="C:\Users\teres\OneDrive\Pictures\Saved Pictures\v16.mp4"></video></div>
+            </div>
+                
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+    document.querySelectorAll('.video-container video').forEach(vid => {
+  vid.onclick = () => {
+    document.querySelector('.popup-video').innerHTML = ''; // Clear the previous videos
+    const popupVideos = document.querySelectorAll('.video-container video');
+    popupVideos.forEach(popupVid => {
+        const clickedVideo = vid.cloneNode(true); // Clone the clicked video element
+    const newVideo = document.createElement('div');
+    newVideo.classList.add('video');
+    newVideo.appendChild(clickedVideo);
+    document.querySelector('.popup-video').appendChild(newVideo);
+
+    document.querySelector('.popup-video').style.display = 'block';
+    });
+
+    document.querySelector('.popup-video').style.display = 'block';
+  }
+});
+
+document.querySelector('.popup-video span').onclick = () => {
+  document.querySelector('.popup-video').style.display = 'none';
+}
+</script>
+    </body>
+</html>

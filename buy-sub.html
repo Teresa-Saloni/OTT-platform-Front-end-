@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel = "stylesheet" href = "buy-sub.css">
+    </head>
+    <body>
+        <div style="margin-top:80px"class= "container">
+            <div style="display: inline-block; margin-left: 150px"  class = "card">
+                <div class = "imgBx">
+                    <img src = "sub.jpg">
+                </div>
+                <div class = "contentBx">
+                    <button id="b1"style = "width :70px;height: 30px;background-color: rgb(64, 130, 57);color: white;border-radius:5px;">Buy</button>
+                </div>
+            </div>
+            <div style="display: inline-block; margin-left: 150px;"  class = "card">
+                <div class = "imgBx">
+                    <img src = "sub2.jpg">
+                </div>
+                <div class = "contentBx">
+                    <button id="b2"style = "width :70px;height: 30px;background-color: rgb(122, 205, 224);color: white;border-radius:5px;">Buy</button>
+                </div>
+            </div>
+            <div style="display: inline-block; margin-left: 150px;"  class = "card">
+                <div class = "imgBx">
+                    <img src = "sub3.jpg">
+                </div>
+                <div class = "contentBx">
+                    <button id="b3"style = "width :70px;height: 30px;background-color: rgb(46, 106, 175);color: white;border-radius:5px;">Buy</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const button = document.getElementById('b1');
+    button.addEventListener('click', function () {
+        window.location.href = 'pay.html'; // URL you want to navigate to
+    });
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const button = document.getElementById('b2');
+    button.addEventListener('click', function () {
+        window.location.href = 'pay1.html'; // URL you want to navigate to
+    });
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const button = document.getElementById('b3');
+    button.addEventListener('click', function () {
+        window.location.href = 'pay2.html'; // URL you want to navigate to
+    });
+});
+    </script>
+</html>

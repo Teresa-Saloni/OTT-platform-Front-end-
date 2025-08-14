@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style123.css">
+    <style>
+        /* CSS for popup styling (example) */
+        .btn{
+            width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color:cadetblue;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+    </style>
+    <title>Payment Form</title>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="col">
+                    <h3 class="title">Billing Address</h3>
+                    <div class="inputbox">
+                        <span>Full name :</span>
+                        <input type="text" placeholder="john">
+                    </div>
+                    <div class="inputbox">
+                        <span>Email :</span>
+                        <input type="email" placeholder="example@gmail.com">
+                    </div>
+                    <div class="inputbox">
+                        <span>Address :</span>
+                        <input type="text" placeholder="room - street - locality">
+                    </div>
+                    <div class="inputbox">
+                        <span>City :</span>
+                        <input type="text" placeholder="Delhi">
+                    </div>
+                    <div class="flex">
+                        <div class="inputbox">
+                            <span>State :</span>
+                            <input type="text" placeholder="India">
+                        </div>
+                        <div class="inputbox">
+                            <span>Zip Code :</span>
+                            <input type="text" placeholder="123 456">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3 class="title">Payment</h3>
+                    <div class="inputbox">
+                        <span>Cards accepted :</span>
+                        <img width = "90%"height="60%"src="cards.jpg" alt="Credit cards">
+                    </div>
+                    <div class="inputbox">
+                        <span>Name on the card :</span>
+                        <input type="text" placeholder="mr. john">
+                    </div>
+                    <div class="inputbox">
+                        <span>Credit card number :</span>
+                        <input type="number" placeholder="1111-2222-3333-4444">
+                    </div>
+                    <div class="inputbox">
+                        <span>exp month :</span>
+                        <input type="text" placeholder="January">
+                    </div>
+                    <div class="flex">
+                        <div class="inputbox">
+                            <span>exp year :</span>
+                            <input type="number" placeholder="2022">
+                        </div>
+                        <div class="inputbox">
+                            <span>CVV :</span>
+                            <input type="text" placeholder="123">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <input  class="btn" type="button" onclick="showAlert()" value="proceed to checkout" >
+
+        </form>
+    </div>
+
+    <script>
+        function showAlert() {
+            if (confirm("Standard pack costs $5.99. Do you want to proceed?")) {
+                window.location.href = 'alert1.html';
+            } else {
+                alert("You have canceled the payment.");
+            }
+        }
+    </script>
+</body>
+</html>

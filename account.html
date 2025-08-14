@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Information</title>
+  <link rel="stylesheet" href="styles43.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Account Info</h1>
+    <div class="profile-picture">
+      <img src="r5.jpg" alt="Profile Picture">
+    </div>
+    <div class="info-section">
+      <h2>Personal Details :</h2><br>
+      <p style = "line-height: 10px;">
+        <p  style = "line-height: 30px;"><strong>Name:</strong> <span id="name"></span></p>
+        <p  style = "line-height: 30px;"><strong>Email:</strong> <span id="email"></span></p>
+        <p  style = "line-height: 30px;"><strong>Phone:</strong> <span id="phone"></span></p>
+        <p  style = "line-height: 30px;"><strong>Date of birth:</strong> <span id="dob"></span></p>
+        <p  style = "line-height: 30px;"><strong>Gender:</strong> <span id="sex"></span></p>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Sample data for demonstration
+const userData = {
+  name: "Rafia Taseen",
+  email: "rafia_taseen@gmail.com",
+  phone: "986522525557",
+  dob: "08-07-2005",
+  sex:"female",
+};
+
+// Populate account information
+document.getElementById("name").textContent = userData.name;
+document.getElementById("email").textContent = userData.email;
+document.getElementById("phone").textContent = userData.phone;
+document.getElementById("dob").textContent = userData.dob;
+document.getElementById("sex").textContent = userData.sex;
+// Handle change password button click
+const changePasswordBtn = document.getElementById("changePasswordBtn");
+changePasswordBtn.addEventListener("click", () => {
+  // Implement your change password logic here
+  console.log("Change password button clicked");
+});
+  </script>
+</body>
+</html>
